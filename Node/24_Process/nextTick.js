@@ -5,3 +5,9 @@ process.nextTick(() =>{
 })
 
 console.log("hello")
+
+//***output would be***//
+
+//start
+//hello
+//next Tick callback

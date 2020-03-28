@@ -1,11 +1,16 @@
-var path = require('path');
+var path = require('path')
+console.log(path.resolve(__filename, "dirname/a/a/b"))
+///Users/smondal/sandip/work/node/JsExample/Node/23_Path/dirname.js/dirname/a/a/b
 
-// var relpath = process.env.PATH.split(path.delimiter);
+console.log(path.resolve(__dirname, "dirname/a/a/b"))
+///Users/smondal/sandip/work/node/JsExample/Node/23_Path/dirname/a/a/b
 
-var relpath = [ "/a/b/c", "c/d", "."]
-var files = relpath.map(function(r){
-  // console.log(path.resolve(process.cwd(), r));
-  return path.resolve(process.cwd(), r);
-})
-// console.log(files)
-console.log(files.slice(1))
+console.log(path.resolve(__dirname, "/dirname/a/a/b"))
+///dirname/a/a/b
+
+
+console.log(path.resolve(__dirname))
+//Here is the output  /Users/smondal/sandip/work/node
+
+console.log(path.resolve("dirname/a/a/b"))
+///Users/smondal/sandip/work/node/JsExample/Node/23_Path/dirname/a/a/b
